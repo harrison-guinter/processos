@@ -1,0 +1,13 @@
+<!--<a routerLink="/cadastro">Novo</a> <br /> -->
+<div>Status:
+    <select name="select" [(ngModel)]="statusFiltro">
+        <option [ngValue]="null"></option>
+      <option [ngValue]="true">Ativo</option>
+      <option [ngValue]="false">Inativo</option>
+    </select>
+    <br>
+Descrição: <input type="text" [(ngModel)]="descricaoFiltro">
+<br>
+Código: <input type="text" [(ngModel)]="codigoFiltro"></div>
+<br>
+<processo-card *ngFor="let processo of listaFiltro3" [processo]="processo"></processo-card>

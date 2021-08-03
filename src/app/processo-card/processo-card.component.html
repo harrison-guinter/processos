@@ -1,0 +1,7 @@
+ <div class="card">
+    <p *ngIf="processo.isAtivo == true"> Ativo </p>
+    <p *ngIf="processo.isAtivo == false"> Inativo </p>
+    <p> {{processo.descricao}} </p>
+    <p> {{processo.codigo}} </p>
+</div>
+<br>

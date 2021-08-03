@@ -1,0 +1,38 @@
+<div class="page">
+    <form class="form" [formGroup]="form">
+      <h2>Formulário</h2>
+      <div class="input">
+        <label for="descricao">Descrição</label>
+        <input
+          type="text"
+          name="descricao"
+          formControlName="descricao"
+        />
+        </div>
+
+      <div class="input">
+        <label for="codigo">Código</label>
+        <input
+          type="text"
+          name="codigo"
+          formControlName="codigo"
+        />
+  
+      <div class="input">
+        <label for="isAtivo">Status</label>
+        <select
+          name="isAtivo"
+          formControlName="isAtivo"
+        >
+          <option [ngValue]="true">
+            Ativo</option
+          ><option [ngValue]="false">
+            Inativo</option
+          >
+        </select>
+        </div>
+      <button type="button" name="button" (click)="submitForm()">Salvar</button>
+    <div class="preview">
+      <h2>Preview</h2>
+      <processo-card [processo]="form.value"></processo-card>
+    </div>
